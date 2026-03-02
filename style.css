@@ -4,7 +4,71 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+/* ===== HEADER ONLY ===== */
 
+/* Header container */
+.header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Flex container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo section */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image */
+.logo {
+    width: 55px;
+    height: 55px;
+    margin-right: 12px;
+}
+
+/* Brand name */
+.logo-section h1 {
+    font-size: 22px;
+    color: #1b5e20;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+.nav a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.nav a:hover {
+    color: #1b5e20;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .nav a {
+        margin: 8px;
+        display: inline-block;
+    }
+}
 body {
   background: #f5f7fb;
   padding-bottom: 70px;
