@@ -1,4 +1,4 @@
-/* ===== GLOBAL STYLES ===== */
+et/* ===== GLOBAL STYLES ===== */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
 
   /* ===== HEADER BANNER FIXED ===== */
 header {
-  background: linear-gradient(135deg, #1e3a8a, #4f46e5);
+  background: white;
   padding: 80px 20px 60px;
   text-align: center;
   color: white;
