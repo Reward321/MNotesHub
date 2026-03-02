@@ -16,10 +16,10 @@ body {
   /* ===== HEADER BANNER FIXED ===== */
 header {
   background: white;
-  padding: 80px 20px 60px;
+  padding: 40px 20px;
   text-align: center;
-  color: white;
-  position: relative;
+  color: #222;   /* change text to dark */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* subtle professional shadow */
 }
 
 /* Logo inside header */
