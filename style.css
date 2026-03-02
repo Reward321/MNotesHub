@@ -163,3 +163,22 @@ body {
     font-size: 20px;
   }
 }
+/* ===== FORCE FULL BANNER HEADER ===== */
+
+.header {
+  width: 100%;
+  max-width: 100% !important;
+  background: linear-gradient(135deg, #1565c0, #1e88e5);
+  padding: 30px 20px 40px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
