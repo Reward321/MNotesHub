@@ -108,113 +108,111 @@ button:hover {
   margin-top: 10px;
   font-weight: bold;
 }</style><script>const quizData = {
-  Electrostatics: [
-    {
-      question: "SI unit of charge?",
-      options: ["Volt", "Coulomb", "Ampere", "Ohm"],
-      correct: 1
-    },
-    {
-      question: "Like charges ___ each other.",
-      options: ["Attract", "Repel", "Neutralize", "Disappear"],
-      correct: 1
-    },
-    {
-      question: "Electric field unit?",
-      options: ["N/C", "Volt", "Tesla", "Watt"],
-      correct: 0
-    },
-    {
-      question: "Device to detect charge?",
-      options: ["Galvanometer", "Electroscope", "Ammeter", "Voltmeter"],
-      correct: 1
-    },
-    {
-      question: "Charge of electron is?",
-      options: ["+1.6×10⁻¹⁹ C", "-1.6×10⁻¹⁹ C", "0", "1 C"],
-      correct: 1
-    },
-    {
-      question: "Capacitance unit?",
-      options: ["Henry", "Farad", "Tesla", "Weber"],
-      correct: 1
-    },
-    {
-      question: "Permittivity symbol?",
-      options: ["μ", "ε0", "λ", "φ"],
-      correct: 1
-    },
-    {
-      question: "Electric potential unit?",
-      options: ["Volt", "Joule", "Newton", "Watt"],
-      correct: 0
-    },
-    {
-      question: "Coulomb's law depends on?",
-      options: ["Distance", "Mass", "Time", "Velocity"],
-      correct: 0
-    },
-    {
-      question: "Field around point charge is?",
-      options: ["Circular", "Radial", "Linear", "Spiral"],
-      correct: 1
-    }
-  ],
+const inorganicQuestions = [
+{
+q:"Which element has highest electronegativity?",
+options:["Oxygen","Fluorine","Chlorine","Nitrogen"],
+answer:1
+},
+{
+q:"Oxidation state of S in H2SO4?",
+options:["+2","+4","+6","-2"],
+answer:2
+},
+{
+q:"Gas that turns limewater milky?",
+options:["CO2","O2","H2","N2"],
+answer:0
+},
+{
+q:"Liquid metal at room temperature?",
+options:["Mercury","Sodium","Aluminium","Copper"],
+answer:0
+},
+{
+q:"Neutral pH value?",
+options:["1","7","10","14"],
+answer:1
+},
+{
+q:"NaCl bond type?",
+options:["Ionic","Covalent","Metallic","Hydrogen"],
+answer:0
+},
+{
+q:"Which is noble gas?",
+options:["Nitrogen","Neon","Oxygen","Hydrogen"],
+answer:1
+},
+{
+q:"Group 1 element?",
+options:["Sodium","Calcium","Aluminium","Zinc"],
+answer:0
+},
+{
+q:"Rusting requires?",
+options:["Oxygen and water","Nitrogen","Hydrogen","CO2"],
+answer:0
+},
+{
+q:"Hardest natural substance?",
+options:["Diamond","Graphite","Quartz","Coal"],
+answer:0
+}
+];
 
-  ModernPhysics: [
-    {
-      question: "Photoelectric effect explained by?",
-      options: ["Newton", "Bohr", "Einstein", "Planck"],
-      correct: 2
-    },
-    {
-      question: "Energy packet is called?",
-      options: ["Electron", "Photon", "Proton", "Neutron"],
-      correct: 1
-    },
-    {
-      question: "E = mc² proposed by?",
-      options: ["Einstein", "Tesla", "Bohr", "Rutherford"],
-      correct: 0
-    },
-    {
-      question: "Bohr model applies to?",
-      options: ["Hydrogen", "Oxygen", "Carbon", "Helium"],
-      correct: 0
-    },
-    {
-      question: "Nuclear reactor uses?",
-      options: ["Fusion", "Fission", "Evaporation", "Ionization"],
-      correct: 1
-    },
-    {
-      question: "Half-life symbol?",
-      options: ["T½", "λ", "μ", "f"],
-      correct: 0
-    },
-    {
-      question: "Binding energy unit?",
-      options: ["MeV", "Joule", "Watt", "Tesla"],
-      correct: 0
-    },
-    {
-      question: "Compton effect involves?",
-      options: ["Electron scattering", "Photon scattering", "Sound waves", "Magnetic field"],
-      correct: 1
-    },
-    {
-      question: "Atomic mass unit?",
-      options: ["amu", "kg", "g", "eV"],
-      correct: 0
-    },
-    {
-      question: "Radioactive decay law is?",
-      options: ["Linear", "atete", "Exponential", "Quadratic"],
-      correct: 2
-    }
-  ]
-};
-
+const organicQuestions = [
+{
+q:"Simplest organic compound?",
+options:["Methane","Ethane","Propane","Butane"],
+answer:0
+},
+{
+q:"Functional group of alcohol?",
+options:["–OH","–COOH","–CHO","–NH2"],
+answer:0
+},
+{
+q:"Ethene belongs to?",
+options:["Alkane","Alkene","Alkyne","Alcohol"],
+answer:1
+},
+{
+q:"Benzene contains how many carbons?",
+options:["6","4","5","8"],
+answer:0
+},
+{
+q:"Formula of ethanol?",
+options:["C2H5OH","CH3OH","C2H6","C3H8"],
+answer:0
+},
+{
+q:"Organic chemistry studies?",
+options:["Carbon compounds","Metals","Salts","Minerals"],
+answer:0
+},
+{
+q:"Alkane general formula?",
+options:["CnH2n+2","CnH2n","CnH2n-2","CnHn"],
+answer:0
+},
+{
+q:"Ethanoic acid common name?",
+options:["Vinegar","Alcohol","Sugar","Salt"],
+answer:0
+},
+{
+q:"Polymer of ethene?",
+options:["Polyethylene","Nylon","Bakelite","PVC"],
+answer:0
+},
+{
+q:"Organic compounds mainly contain?",
+options:["Carbon","Sodium","Iron","Calcium"],
+answer:0
+}
+];
 // You can add Optics & Magnetism same way (structure is identical)
 
 const container = document.getElementById("quiz-container");
