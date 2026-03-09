@@ -16,6 +16,24 @@
     <h1>MNotesHub</h1>
     <p>Empowering Student Through Free Education</p>
   </header>
+  <!-- Hamburger Button -->
+<div class="menu-btn" onclick="openMenu()">☰</div>
+
+<!-- Side Navigation -->
+<div id="navMenu" class="side-nav">
+
+  <span class="close-btn" onclick="closeMenu()">✕</span>
+
+  <h2 class="logo">MNotesHub</h2>
+
+  <a href="index.html">Home</a>
+  <a href="notes.html">Notes</a>
+  <a href="mcq.html">Daily Quiz</a>
+  <a href="about.html">About Us</a>
+
+  <button class="join-btn">Join Community</button>
+
+</div>
 
   <!-- Notes Section -->
   <section class="notes-container">
@@ -36,14 +54,7 @@
     </div>
   </section>
 
-  <!-- Bottom Navigation -->
-  <nav class="bottom-nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="mcq.html">🫵 Practice MCQ</a>
-    <a href="notes.html" class="active">📚 Notes</a>
-    <a href="about.html">ℹ️ About</a>
-  </nav>
-
+  
 </body>
 </html><style>* {
   margin: 0;
@@ -145,4 +156,89 @@ body {
 .bottom-nav a.active {
   color: #0066ff;
   font-weight: 600;
-}</style>
+}
+body{
+font-family:Arial;
+margin:0;
+}
+
+/* Menu button */
+
+.menu-btn{
+font-size:28px;
+cursor:pointer;
+padding:12px 15px;
+}
+
+/* Side navigation */
+
+.side-nav{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+right:0;
+background:#ffffff;
+overflow-x:hidden;
+transition:0.35s;
+padding-top:60px;
+box-shadow:-3px 0 15px rgba(0,0,0,0.15);
+}
+
+/* Logo */
+
+.logo{
+padding-left:25px;
+color:#2e8b57;
+}
+
+/* Links */
+
+.side-nav a{
+display:block;
+padding:14px 25px;
+text-decoration:none;
+font-size:18px;
+color:#333;
+border-bottom:1px solid #eee;
+}
+
+.side-nav a:hover{
+background:#f5f5f5;
+color:#2e8b57;
+}
+
+/* Close button */
+
+.close-btn{
+position:absolute;
+top:15px;
+right:20px;
+font-size:26px;
+cursor:pointer;
+}
+
+/* Button */
+
+.join-btn{
+margin:35px 25px;
+padding:12px;
+width:80%;
+border:none;
+background:#2e8b57;
+color:white;
+font-size:17px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.join-btn:hover{
+background:#256f47;
+  }</style>
+<script>function openMenu(){
+document.getElementById("navMenu").style.width="260px";
+}
+
+function closeMenu(){
+document.getElementById("navMenu").style.width="0";
+}</script>
