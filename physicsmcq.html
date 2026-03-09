@@ -1,0 +1,520 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Physics MCQ - MNotesHub</title>
+  <link rel="stylesheet" href="mcqstyle.css">
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .unit { margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; }
+    .unit-header {
+      background: #007BFF;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+    }
+    .unit-content { display: none; padding: 15px; }
+    .question { margin-bottom: 10px; }
+    button { margin-top: 5px; }
+    .score { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+
+<header>
+<h1>MNotesHub</h2>
+<p>Empowering Studnet With Free Education</p>
+</header>
+<body>
+
+<h2>Physics MCQ Test</h2>
+
+<div id="quiz-container"></div>
+
+<script src="physicsmcq.js"></script>
+</body>
+</html><style>body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f6fc;
+  padding: 20px;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+header {
+  background: linear-gradient(135deg, #0066ff, #0044cc);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Unit Card */
+.unit {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Foldable Header */
+.unit-header {
+  padding: 15px;
+  background: linear-gradient(135deg,#007BFF,#0056b3);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hidden Content */
+.unit-content {
+  display: none;
+  padding: 15px;
+}
+
+/* Question Block */
+.question {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f8fbff;
+  border-radius: 8px;
+}
+
+.options label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.score {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.unit-header{
+cursor:pointer;
+background:#222;
+color:white;
+padding:10px;
+margin-top:10px;
+border-radius:6px;
+}
+
+.unit-content{
+display:none;
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+button{
+padding:10px 15px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}</style><script>const quizData = {
+  Laws: [
+    {
+      question: "Gauss's law states:",
+      options: [
+        "Electric flux through closed surface = 0",
+        "Electric flux through closed surface = q_enclosed / ε₀",
+        "Electric field is always uniform",
+        "Electric field lines intersect"
+      ],
+      correct: 1
+    },
+    {
+      question: "Ohm's law states:",
+      options: [
+        "V = IR, current ∝ voltage",
+        "Current ∝ 1/R only",
+        "Resistance is independent of material",
+        "Current flows from low potential to high"
+      ],
+      correct: 0
+    },
+    {
+      question: "Faraday's law of electromagnetic induction:",
+      options: [
+        "Induced emf ∝ change in magnetic flux",
+        "Induced emf depends on current",
+        "Induced current is always zero",
+        "Magnetic field is constant"
+      ],
+      correct: 0
+    },
+    {
+      question: "Lenz's law:",
+      options: [
+        "Induced current opposes the cause",
+        "Induced current = applied voltage",
+        "Magnetic field lines always parallel to current",
+        "Flux always decreases"
+      ],
+      correct: 0
+    },
+    {
+      question: "KCL states:",
+      options: [
+        "Sum of currents at a junction = 0",
+        "Sum of voltages in loop = 0",
+        "V = IR",
+        "Current in series = 0"
+      ],
+      correct: 0
+    },
+    {
+      question: "KVL states:",
+      options: [
+        "Sum of currents at junction = 0",
+        "Sum of voltages around closed loop = 0",
+        "EMF = IR",
+        "Current in parallel = current in series"
+      ],
+      correct: 1
+    }
+  ],
+
+  Concepts: [
+    {
+      question: "Electric field inside a conductor in electrostatic equilibrium is:",
+      options: ["Zero", "Maximum", "Constant", "Infinite"],
+      correct: 0
+    },
+    {
+      question: "Majority carriers in n-type semiconductor are:",
+      options: ["Electrons", "Holes", "Protons", "Ions"],
+      correct: 0
+    },
+    {
+      question: "Total internal reflection occurs when:",
+      options: [
+        "Light goes from rarer → denser",
+        "Angle of incidence < critical angle",
+        "Light goes denser → rarer & incidence > critical angle",
+        "Always"
+      ],
+      correct: 2
+    },
+    {
+      question: "Resonance in series LCR occurs when:",
+      options: [
+        "XL = XC",
+        "XL > XC",
+        "XL < XC",
+        "R = 0"
+      ],
+      correct: 0
+    },
+    {
+      question: "Photoelectric emission occurs only when:",
+      options: [
+        "Frequency > threshold",
+        "Intensity high",
+        "Voltage applied",
+        "Temperature increases"
+      ],
+      correct: 0
+    },
+    {
+      question: "Magnetic field at the center of circular loop depends on:",
+      options: [
+        "Radius",
+        "Current",
+        "Number of turns",
+        "All of these"
+      ],
+      correct: 3
+    },
+    {
+      question: "Bohr radius is proportional to:",
+      options: ["n", "n²", "1/n", "Constant"],
+      correct: 1
+    },
+    {
+      question: "Electric dipole moment is defined as:",
+      options: [
+        "q × distance between charges",
+        "q / distance",
+        "q² × distance",
+        "q × area"
+      ],
+      correct: 0
+    }
+  ],
+
+  FormulaMCQs: [
+    {
+      question: "Electric field due to point charge q at distance r:",
+      options: [
+        "E = kq / r²",
+        "E = kq / r",
+        "E = qr²",
+        "E = k / qr²"
+      ],
+      correct: 0
+    },
+    {
+      question: "Potential due to point charge q at distance r:",
+      options: [
+        "V = kq / r",
+        "V = kq / r²",
+        "V = qr",
+        "V = k / qr"
+      ],
+      correct: 0
+    },
+    {
+      question: "Impedance of series LCR circuit:",
+      options: [
+        "Z = R + XL - XC",
+        "Z = √[R² + (XL - XC)²]",
+        "Z = √[R² + (XL + XC)²]",
+        "Z = R / (XL - XC)"
+      ],
+      correct: 1
+    },
+    {
+      question: "Fringe width in YDSE:",
+      options: [
+        "β = Dλ/d",
+        "β = d/λD",
+        "β = λdD",
+        "β = D/dλ"
+      ],
+      correct: 0
+    },
+    {
+      question: "Power dissipated in resistor:",
+      options: [
+        "P = VI",
+        "P = I²R",
+        "P = V²/R",
+        "All of these"
+      ],
+      correct: 3
+    },
+    {
+      question: "EMF induced in rotating coil:",
+      options: [
+        "e = NBA cosωt",
+        "e = NBA sinωt",
+        "e = NBAω sinωt",
+        "e = N B A / ω t"
+      ],
+      correct: 2
+    },
+    {
+      question: "Force on moving charge in magnetic field:",
+      options: [
+        "F = qvB",
+        "F = qvB cosθ",
+        "F = qvB sinθ",
+        "F = qVB"
+      ],
+      correct: 2
+    },
+    {
+      question: "Capacitance of parallel plate capacitor:",
+      options: [
+        "C = ε₀A/d",
+        "C = ε₀ d / A",
+        "C = d / (ε₀A)",
+        "C = ε₀ A d"
+      ],
+      correct: 0
+    }
+  ],
+
+  ApplicationUnits: [
+    {
+      question: "Stopping potential depends on:",
+      options: [
+        "Frequency of light",
+        "Intensity of light",
+        "Both frequency & intensity",
+        "Resistance"
+      ],
+      correct: 0
+    },
+    {
+      question: "SI unit of electric flux:",
+      options: [
+        "Nm²/C",
+        "N/C",
+        "C/m²",
+        "Volt"
+      ],
+      correct: 0
+    },
+    {
+      question: "Work function φ is:",
+      options: [
+        "Energy needed to remove electron from metal",
+        "KE of electron",
+        "Current in circuit",
+        "Voltage"
+      ],
+      correct: 0
+    },
+    {
+      question: "The speed of electron in Bohr orbit depends on:",
+      options: [
+        "n only",
+        "1/n only",
+        "n & Z",
+        "Independent"
+      ],
+      correct: 1
+    },
+    {
+      question: "Unit of magnetic moment:",
+      options: [
+        "Am²",
+        "Tesla",
+        "Wb",
+        "Volt"
+      ],
+      correct: 0
+    },
+    {
+      question: "Electric potential is scalar because:",
+      options: [
+        "It has only magnitude",
+        "It has magnitude & direction",
+        "It is vector",
+        "It depends on B field"
+      ],
+      correct: 0
+    },
+    {
+      question: "In photoelectric effect, KEmax =",
+      options: [
+        "hf",
+        "hf - φ",
+        "φ - hf",
+        "h/f"
+      ],
+      correct: 1
+    },
+    {
+      question: "Energy of photon:",
+      options: [
+        "E = hf",
+        "E = mc²",
+        "E = IR",
+        "E = qV"
+      ],
+      correct: 0
+    }
+  ]
+};
+// You can add Optics & Magnetism same way (structure is identical)
+
+const container = document.getElementById("quiz-container");
+
+Object.keys(quizData).forEach(unit => {
+  const unitDiv = document.createElement("div");
+  unitDiv.className = "unit";
+
+  const header = document.createElement("div");
+  header.className = "unit-header";
+  header.textContent = unit;
+
+  const content = document.createElement("div");
+  content.className = "unit-content";
+
+  header.onclick = () => {
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
+  };
+
+  quizData[unit].forEach((q, index) => {
+    const questionDiv = document.createElement("div");
+    questionDiv.className = "question";
+
+    const question = document.createElement("p");
+    question.textContent = `${index + 1}. ${q.question}`;
+    questionDiv.appendChild(question);
+
+    q.options.forEach((option, i) => {
+      const label = document.createElement("label");
+      const radio = document.createElement("input");
+
+      radio.type = "radio";
+      radio.name = unit + index;
+      radio.value = i;
+
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(option));
+      questionDiv.appendChild(label);
+      questionDiv.appendChild(document.createElement("br"));
+    });
+
+    content.appendChild(questionDiv);
+  });
+
+  const submitBtn = document.createElement("button");
+  submitBtn.textContent = "Submit Test";
+
+  const scoreDisplay = document.createElement("div");
+  scoreDisplay.className = "score";
+
+  submitBtn.onclick = () => {
+  let score = 0;
+
+  quizData[unit].forEach((q, index) => {
+    const radios = document.querySelectorAll(`input[name="${unit + index}"]`);
+    const selected = document.querySelector(`input[name="${unit + index}"]:checked`);
+
+    radios.forEach((radio, i) => {
+      const label = radio.parentElement;
+
+      if (i === q.correct) {
+        label.style.color = "green";
+        label.style.fontWeight = "bold";
+      }
+
+      if (selected && parseInt(selected.value) === q.correct) {
+        if (radio.checked) {
+          label.style.color = "green";
+        }
+      } else if (radio.checked) {
+        label.style.color = "red";
+      }
+    });
+
+    if (selected && parseInt(selected.value) === q.correct) {
+      score++;
+    }
+  });
+
+  scoreDisplay.textContent = `Score: ${score} / ${quizData[unit].length}`;
+};
+
+  content.appendChild(submitBtn);
+  content.appendChild(scoreDisplay);
+
+  unitDiv.appendChild(header);
+  unitDiv.appendChild(content);
+  container.appendChild(unitDiv);
+});</script>

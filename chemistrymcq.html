@@ -1,0 +1,729 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chemistry MCQ - MNotesHub</title>
+  <link rel="stylesheet" href="mcqstyle.css">
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .unit { margin-bottom: 20px; border: 1px solid #ccc; border-radius: 8px; }
+    .unit-header {
+      background: #007BFF;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+    }
+    .unit-content { display: none; padding: 15px; }
+    .question { margin-bottom: 10px; }
+    button { margin-top: 5px; }
+    .score { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+
+<header>
+<h1>MNotesHub</h2>
+<p>Empowering Studnet With Free Education</p>
+</header>
+<body>
+
+<h2>Chemistry MCQ Test</h2>
+
+<div id="quiz-container"></div>
+
+<script src="chemistrymcq.js"></script>
+</body>
+</html><style>body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f6fc;
+  padding: 20px;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+header {
+  background: linear-gradient(135deg, #0066ff, #0044cc);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Unit Card */
+.unit {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Foldable Header */
+.unit-header {
+  padding: 15px;
+  background: linear-gradient(135deg,#007BFF,#0056b3);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hidden Content */
+.unit-content {
+  display: none;
+  padding: 15px;
+}
+
+/* Question Block */
+.question {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f8fbff;
+  border-radius: 8px;
+}
+
+.options label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.score {
+  margin-top: 10px;
+  font-weight: bold;
+}</style><script>const quizData = {
+Solutions: [
+{
+question:"The concentration of a solution expressed as moles of solute per kg of solvent is called:",
+options:["Molarity","Molality","Normality","Mole fraction"],
+correct:1
+},
+{
+question:"Which property depends only on the number of solute particles?",
+options:["Viscosity","Surface tension","Colligative property","Density"],
+correct:2
+},
+{
+question:"Which is not a colligative property?",
+options:["Osmotic pressure","Elevation in boiling point","Depression in freezing point","Surface tension"],
+correct:3
+},
+{
+question:"The unit of molarity is:",
+options:["mol kg⁻¹","mol L⁻¹","g L⁻¹","mol m⁻³"],
+correct:1
+},
+{
+question:"Osmosis occurs through:",
+options:["porous membrane","semi-permeable membrane","metallic membrane","plastic membrane"],
+correct:1
+},
+{
+question:"Van't Hoff factor measures:",
+options:["strength of solution","degree of association/dissociation","density","solubility"],
+correct:1
+},
+{
+question:"When non-volatile solute is added boiling point:",
+options:["decreases","increases","remains same","becomes zero"],
+correct:1
+},
+{
+question:"Raoult's law applies to:",
+options:["ideal solutions","colloids","suspensions","solids"],
+correct:0
+},
+{
+question:"Relative lowering of vapour pressure equals:",
+options:["mole fraction of solvent","mole fraction of solute","molarity","molality"],
+correct:1
+},
+{
+question:"Depression in freezing point proportional to:",
+options:["molality","molarity","mole fraction","pressure"],
+correct:0
+}
+],
+
+Electrochemistry:[
+{
+question:"Device converting chemical energy into electrical energy:",
+options:["Electrolytic cell","Galvanic cell","Fuel cell","Battery"],
+correct:1
+},
+{
+question:"Anode is electrode where:",
+options:["reduction occurs","oxidation occurs","electrons enter","ions form"],
+correct:1
+},
+{
+question:"Cathode is electrode where:",
+options:["oxidation occurs","reduction occurs","electrons leave","atoms break"],
+correct:1
+},
+{
+question:"Unit of electrical conductance:",
+options:["Ohm","Siemens","Volt","Ampere"],
+correct:1
+},
+{
+question:"Kohlrausch law deals with:",
+options:["strong electrolytes","weak electrolytes at infinite dilution","gases","solids"],
+correct:1
+},
+{
+question:"Standard electrode potential measured at:",
+options:["1M concentration","1 atm pressure","298 K","all of these"],
+correct:3
+},
+{
+question:"Faraday constant value:",
+options:["96500 C","96000 C","100000 C","93000 C"],
+correct:0
+},
+{
+question:"Conductance reciprocal of:",
+options:["resistance","voltage","current","power"],
+correct:0
+},
+{
+question:"Salt bridge maintains:",
+options:["temperature","electrical neutrality","pressure","density"],
+correct:1
+},
+{
+question:"Rust mainly contains:",
+options:["FeO","Fe₂O₃·xH₂O","FeCl₃","Fe₂S₃"],
+correct:1
+}
+],
+
+ChemicalKinetics:[
+{
+question:"Rate of reaction is change in:",
+options:["temperature","concentration","pressure","volume"],
+correct:1
+},
+{
+question:"Unit of rate constant depends on:",
+options:["temperature","order of reaction","pressure","catalyst"],
+correct:1
+},
+{
+question:"Order of reaction determined by:",
+options:["stoichiometry","experiment","temperature","pressure"],
+correct:1
+},
+{
+question:"Half life of first order reaction:",
+options:["constant","variable","infinite","zero"],
+correct:0
+},
+{
+question:"Arrhenius equation relates rate constant with:",
+options:["concentration","temperature","pressure","volume"],
+correct:1
+},
+{
+question:"Catalyst works by:",
+options:["increasing energy","lowering activation energy","increasing pressure","lowering temperature"],
+correct:1
+},
+{
+question:"Zero order reaction rate:",
+options:["independent of concentration","proportional to concentration","square relation","infinite"],
+correct:0
+},
+{
+question:"Activation energy unit:",
+options:["J mol⁻¹","mol L⁻¹","atm","K"],
+correct:0
+},
+{
+question:"Pseudo first order reaction example:",
+options:["hydrolysis of ester","combustion","rusting","precipitation"],
+correct:0
+},
+{
+question:"Slowest step determines:",
+options:["mechanism","rate","temperature","order"],
+correct:1
+}
+],
+
+dBlock:[
+{
+question:"d-block elements also called:",
+options:["representative elements","transition elements","noble gases","lanthanides"],
+correct:1
+},
+{
+question:"Transition metals show:",
+options:["variable oxidation states","constant valency","no reactivity","only +1 state"],
+correct:0
+},
+{
+question:"Coloured compounds due to:",
+options:["d-d transition","s electrons","p electrons","nuclear charge"],
+correct:0
+},
+{
+question:"Lanthanide contraction affects:",
+options:["atomic size","density","chemistry of elements","all"],
+correct:3
+},
+{
+question:"Zn Cd Hg are:",
+options:["transition metals","not transition metals","lanthanides","actinides"],
+correct:1
+},
+{
+question:"Oxidation state of Cr in K₂Cr₂O₇:",
+options:["+3","+6","+2","+4"],
+correct:1
+},
+{
+question:"KMnO₄ is:",
+options:["oxidizing agent","reducing agent","neutral","catalyst"],
+correct:0
+},
+{
+question:"Lanthanides called:",
+options:["rare earth elements","noble metals","alkali metals","halogens"],
+correct:0
+},
+{
+question:"Actinides are:",
+options:["radioactive","stable","inert","neutral"],
+correct:0
+},
+{
+question:"Highest oxidation state shown by Mn:",
+options:["+5","+7","+3","+2"],
+correct:1
+}
+],
+
+Coordination:[
+{
+question:"Central metal surrounded by:",
+options:["ligands","ions","electrons","atoms"],
+correct:0
+},
+{
+question:"Ligand donating one pair:",
+options:["monodentate","bidentate","tridentate","tetradentate"],
+correct:0
+},
+{
+question:"Coordination number of [Co(NH₃)₆]³⁺:",
+options:["4","6","3","2"],
+correct:1
+},
+{
+question:"Chelating ligand example:",
+options:["EDTA","NH₃","H₂O","Cl⁻"],
+correct:0
+},
+{
+question:"Ligands donating multiple sites called:",
+options:["ambidentate","chelating","neutral","anionic"],
+correct:1
+},
+{
+question:"Crystal field theory explains:",
+options:["magnetism","colour","stability","all"],
+correct:3
+},
+{
+question:"[Fe(CN)₆]⁴⁻ coordination number:",
+options:["4","6","2","3"],
+correct:1
+},
+{
+question:"Ligand NH₃ type:",
+options:["neutral","anionic","cationic","bidentate"],
+correct:0
+},
+{
+question:"EDTA denticity:",
+options:["2","4","6","8"],
+correct:2
+},
+{
+question:"Hybridisation in octahedral complex:",
+options:["sp²","sp³","d²sp³","sp³d"],
+correct:2
+}
+],
+
+Haloalkanes:[
+{
+question:"Haloalkanes contain:",
+options:["halogen atom","oxygen","nitrogen","sulfur"],
+correct:0
+},
+{
+question:"SN1 reaction involves:",
+options:["carbocation","carbanion","radical","ion pair"],
+correct:0
+},
+{
+question:"SN2 reaction is:",
+options:["one step","two step","three step","equilibrium"],
+correct:0
+},
+{
+question:"Haloarenes less reactive due to:",
+options:["resonance","inductive","steric","hyperconjugation"],
+correct:0
+},
+{
+question:"Grignard reagent formula:",
+options:["RMgX","RX","R₂Mg","R₃Mg"],
+correct:0
+},
+{
+question:"Best leaving group:",
+options:["I⁻","Cl⁻","F⁻","OH⁻"],
+correct:0
+},
+{
+question:"SN2 favoured by:",
+options:["primary halide","secondary","tertiary","aryl"],
+correct:0
+},
+{
+question:"Aryl halide reaction difficulty due to:",
+options:["resonance stabilization","weak bond","ionic bond","none"],
+correct:0
+},
+{
+question:"Haloalkane hydrolysis gives:",
+options:["alcohol","alkene","ketone","ester"],
+correct:0
+},
+{
+question:"Alkyl chloride with alcoholic KOH forms:",
+options:["alkene","alcohol","ether","aldehyde"],
+correct:0
+}
+],
+
+AlcoholPhenolEther:[
+{
+question:"Functional group of alcohol:",
+options:["–OH","–CHO","–COOH","–NH₂"],
+correct:0
+},
+{
+question:"Phenol acidic due to:",
+options:["resonance stabilization","inductive","hydrogen bonding","polarity"],
+correct:0
+},
+{
+question:"Ether general formula:",
+options:["R-O-R'","R-OH","R-CHO","R-COOH"],
+correct:0
+},
+{
+question:"Lucas test used for:",
+options:["alcohol classification","phenol","ether","aldehyde"],
+correct:0
+},
+{
+question:"Phenol reacts with NaOH because:",
+options:["acidic nature","basic nature","neutral","inert"],
+correct:0
+},
+{
+question:"Dehydration of alcohol gives:",
+options:["alkene","alkane","acid","ether"],
+correct:0
+},
+{
+question:"Methanol oxidation gives:",
+options:["formaldehyde","ethanol","acetone","acid"],
+correct:0
+},
+{
+question:"Phenol with bromine water:",
+options:["white ppt","red ppt","blue ppt","no reaction"],
+correct:0
+},
+{
+question:"Ether cleavage occurs with:",
+options:["HI","H₂O","NaOH","NH₃"],
+correct:0
+},
+{
+question:"Alcohol boiling point high due to:",
+options:["H-bonding","dipole","mass","density"],
+correct:0
+}
+],
+
+AldehydeKetoneAcid:[
+{
+question:"Functional group of aldehyde:",
+options:["–CHO","–CO–","–COOH","–OH"],
+correct:0
+},
+{
+question:"Tollen reagent gives:",
+options:["silver mirror","brown ring","blue complex","red ppt"],
+correct:0
+},
+{
+question:"Carboxylic acid group:",
+options:["–COOH","–CHO","–CO","–OH"],
+correct:0
+},
+{
+question:"Aldehydes oxidise to:",
+options:["acids","alcohol","ketone","ester"],
+correct:0
+},
+{
+question:"Ketones resistant to oxidation because:",
+options:["lack H on carbonyl","stable","low reactivity","steric"],
+correct:0
+},
+{
+question:"Fehling test positive for:",
+options:["aldehydes","ketones","acids","esters"],
+correct:0
+},
+{
+question:"Acid chloride reacts with water to form:",
+options:["acid","ketone","alcohol","ester"],
+correct:0
+},
+{
+question:"Carboxylic acids acidic due to:",
+options:["resonance stabilization","inductive","polar","size"],
+correct:0
+},
+{
+question:"Aldol condensation occurs in:",
+options:["aldehydes/ketones with α-H","acids","ethers","alcohol"],
+correct:0
+},
+{
+question:"Acetone is:",
+options:["ketone","aldehyde","acid","ester"],
+correct:0
+}
+],
+
+Amines:[
+{
+question:"Functional group of amine:",
+options:["–NH₂","–OH","–COOH","–CHO"],
+correct:0
+},
+{
+question:"Primary amine formula:",
+options:["RNH₂","R₂NH","R₃N","R₄N"],
+correct:0
+},
+{
+question:"Hinsberg test used for:",
+options:["amine identification","alcohol","aldehyde","acid"],
+correct:0
+},
+{
+question:"Basicity of amines due to:",
+options:["lone pair on N","H bonding","resonance","mass"],
+correct:0
+},
+{
+question:"Aniline basicity less due to:",
+options:["resonance","inductive","mass","size"],
+correct:0
+},
+{
+question:"Diazotization occurs with:",
+options:["primary aromatic amine","secondary","tertiary","alkane"],
+correct:0
+},
+{
+question:"Carbylamine test detects:",
+options:["primary amine","secondary","tertiary","amide"],
+correct:0
+},
+{
+question:"Ammonia hybridisation:",
+options:["sp³","sp²","sp","dsp²"],
+correct:0
+},
+{
+question:"Aliphatic amines stronger base than:",
+options:["aromatic amines","ammonia","acids","alcohol"],
+correct:0
+},
+{
+question:"Quaternary ammonium salt charge:",
+options:["+1","-1","0","+2"],
+correct:0
+}
+],
+
+Biomolecules:[
+{
+question:"Basic unit of carbohydrate:",
+options:["monosaccharide","amino acid","fatty acid","nucleotide"],
+correct:0
+},
+{
+question:"Proteins are polymers of:",
+options:["amino acids","sugars","nucleotides","fats"],
+correct:0
+},
+{
+question:"DNA stands for:",
+options:["Deoxyribonucleic acid","Dinucleic acid","Double nucleic acid","Dynamic nucleic acid"],
+correct:0
+},
+{
+question:"Vitamin C is:",
+options:["water soluble","fat soluble","hormone","enzyme"],
+correct:0
+},
+{
+question:"Enzymes are:",
+options:["proteins","carbohydrates","lipids","vitamins"],
+correct:0
+},
+{
+question:"Glucose type:",
+options:["hexose","pentose","triose","tetrose"],
+correct:0
+},
+{
+question:"Starch polymer of:",
+options:["glucose","fructose","ribose","galactose"],
+correct:0
+},
+{
+question:"DNA base:",
+options:["adenine","uracil","glycine","serine"],
+correct:0
+},
+{
+question:"Protein structure primary means:",
+options:["amino acid sequence","helix","sheet","fold"],
+correct:0
+},
+{
+question:"Insulin is:",
+options:["protein hormone","vitamin","lipid","enzyme"],
+correct:0
+}
+]
+};
+// You can add Optics & Magnetism same way (structure is identical)
+
+const container = document.getElementById("quiz-container");
+
+Object.keys(quizData).forEach(unit => {
+  const unitDiv = document.createElement("div");
+  unitDiv.className = "unit";
+
+  const header = document.createElement("div");
+  header.className = "unit-header";
+  header.textContent = unit;
+
+  const content = document.createElement("div");
+  content.className = "unit-content";
+
+  header.onclick = () => {
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
+  };
+
+  quizData[unit].forEach((q, index) => {
+    const questionDiv = document.createElement("div");
+    questionDiv.className = "question";
+
+    const question = document.createElement("p");
+    question.textContent = `${index + 1}. ${q.question}`;
+    questionDiv.appendChild(question);
+
+    q.options.forEach((option, i) => {
+      const label = document.createElement("label");
+      const radio = document.createElement("input");
+
+      radio.type = "radio";
+      radio.name = unit + index;
+      radio.value = i;
+
+      label.appendChild(radio);
+      label.appendChild(document.createTextNode(option));
+      questionDiv.appendChild(label);
+      questionDiv.appendChild(document.createElement("br"));
+    });
+
+    content.appendChild(questionDiv);
+  });
+
+  const submitBtn = document.createElement("button");
+  submitBtn.textContent = "Submit Test";
+
+  const scoreDisplay = document.createElement("div");
+  scoreDisplay.className = "score";
+
+submitBtn.onclick = () => {
+  let score = 0;
+
+  quizData[unit].forEach((q, index) => {
+    const radios = document.querySelectorAll(`input[name="${unit + index}"]`);
+    const selected = document.querySelector(`input[name="${unit + index}"]:checked`);
+
+    radios.forEach((radio, i) => {
+      const label = radio.parentElement;
+
+      if (i === q.correct) {
+        label.style.color = "green";
+        label.style.fontWeight = "bold";
+      }
+
+      if (selected && parseInt(selected.value) === q.correct) {
+        if (radio.checked) {
+          label.style.color = "green";
+        }
+      } else if (radio.checked) {
+        label.style.color = "red";
+      }
+    });
+
+    if (selected && parseInt(selected.value) === q.correct) {
+      score++;
+    }
+  });
+
+  scoreDisplay.textContent = `Score: ${score} / ${quizData[unit].length}`;
+}; 
+
+  content.appendChild(submitBtn);
+  content.appendChild(scoreDisplay);
+
+  unitDiv.appendChild(header);
+  unitDiv.appendChild(content);
+  container.appendChild(unitDiv);
+});2</script>
